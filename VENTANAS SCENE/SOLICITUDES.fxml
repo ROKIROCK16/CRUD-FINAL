@@ -21,11 +21,11 @@
                         <TableColumn prefWidth="195.07199096679688" text="ESTADO" />
                      </columns>
                   </TableView>
-                  <Button layoutX="27.0" layoutY="289.0" mnemonicParsing="false" text="RERESAR" />
-                  <Button layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
-                  <TextField layoutX="27.0" layoutY="11.0" prefHeight="28.0" prefWidth="495.0" />
-                  <Button layoutX="286.0" layoutY="289.0" mnemonicParsing="false" text="ACEPTAR" />
-                  <Button layoutX="537.0" layoutY="289.0" mnemonicParsing="false" text="RECHAZAR" />
+                  <Button fx:id="btnRegresarSol" layoutX="27.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbtnRegresarSol" text="RERESAR" />
+                  <Button fx:id="btnFiltrarSolicitudes" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" onAction="#OnbtnFiltrarSolicitudes" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
+                  <TextField fx:id="txtFiltrarSolicitudes" layoutX="27.0" layoutY="11.0" prefHeight="28.0" prefWidth="495.0" />
+                  <Button fx:id="btnAceptarSol" layoutX="286.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbtnAceptarSol" text="ACEPTAR" />
+                  <Button fx:id="btnRechazarSol" layoutX="537.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbtnRechazarSol" text="RECHAZAR" />
                </children>
             </AnchorPane>
          </items>

@@ -19,7 +19,7 @@
                         <TableColumn prefWidth="195.07199096679688" text="ESTADO" />
                      </columns>
                   </TableView>
-                  <Button layoutX="27.0" layoutY="289.0" mnemonicParsing="false" text="RERESAR" />
+                  <Button fx:id="btnREGRESAR" layoutX="27.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbntREGRESAR" text="RERESAR" />
                </children>
             </AnchorPane>
          </items>

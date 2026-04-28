@@ -10,17 +10,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.3230186339109212" layoutX="-3.0" orientation="VERTICAL" prefHeight="472.0" prefWidth="642.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TextField layoutX="29.0" layoutY="24.0" />
-                  <TextField layoutX="29.0" layoutY="108.0" />
-                  <TextField layoutX="29.0" layoutY="63.0" />
-                  <ComboBox layoutX="368.0" layoutY="24.0" prefWidth="150.0" />
+                  <TextField fx:id="txtAnimal" layoutX="29.0" layoutY="24.0" />
+                  <TextField fx:id="txtRaza" layoutX="29.0" layoutY="108.0" />
+                  <TextField fx:id="txtNombre" layoutX="29.0" layoutY="63.0" />
+                  <ComboBox fx:id="idSexo" layoutX="368.0" layoutY="24.0" onAction="#OncbmSexo" prefWidth="150.0" />
                   <TextField layoutX="368.0" layoutY="72.0" />
                   <Label layoutX="197.0" layoutY="27.0" text="Animal">
                      <font>
@@ -47,7 +46,7 @@
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <Button layoutX="368.0" layoutY="121.0" mnemonicParsing="false" text="AGREGAR PELUDITO" />
+                  <Button fx:id="btnAgregar" layoutX="368.0" layoutY="121.0" mnemonicParsing="false" onAction="#Onbutton" text="AGREGAR PELUDITO" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="638.0">
@@ -62,11 +61,11 @@
                         <TableColumn prefWidth="125.1839599609375" text="ESTADO" />
                     </columns>
                   </TableView>
-                  <Button layoutX="14.0" layoutY="279.0" mnemonicParsing="false" text="CERRAR" />
-                  <Button layoutX="541.0" layoutY="279.0" mnemonicParsing="false" text="SOLICITUDES" />
-                  <Button layoutX="284.0" layoutY="279.0" mnemonicParsing="false" text="ELIMINAR" />
-                  <Button layoutX="530.0" layoutY="11.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
-                  <TextField layoutX="27.0" layoutY="11.0" prefHeight="28.0" prefWidth="495.0" />
+                  <Button fx:id="btnCerrar" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnctnCerrar" text="CERRAR" />
+                  <Button fx:id="btnSolicitudes" layoutX="541.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnbtnSolicitudes" text="SOLICITUDES" />
+                  <Button fx:id="btnEliminar" layoutX="284.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnbtnEliminar" text="ELIMINAR" />
+                  <Button fx:id="btnFiltrar" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" onAction="#OnbtnFiltrar" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
+                  <TextField fx:id="txtFiltros" layoutX="27.0" layoutY="11.0" prefHeight="28.0" prefWidth="495.0" />
                </children>
             </AnchorPane>
         </items>
