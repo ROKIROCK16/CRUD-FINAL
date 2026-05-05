@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.7837076354852488" layoutX="24.0" layoutY="22.0" orientation="VERTICAL" prefHeight="356.0" prefWidth="551.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField layoutX="34.0" layoutY="43.0" />
+                  <TextField layoutX="34.0" layoutY="160.0" prefHeight="27.0" prefWidth="127.0" />
+                  <TextField layoutX="34.0" layoutY="116.0" />
+                  <TextField layoutX="34.0" layoutY="80.0" />
+                  <TextField layoutX="34.0" layoutY="208.0" prefHeight="27.0" prefWidth="127.0" />
+                  <DatePicker layoutX="245.0" layoutY="160.0" />
+                  <Text layoutX="202.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de usuatios" />
+                  <Label layoutX="198.0" layoutY="46.0" prefHeight="19.0" prefWidth="59.0" text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+                  <Label layoutX="228.0" layoutY="84.0" text="Correo Electronico">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="46.0" prefHeight="19.0" prefWidth="119.0" text="Apellido paterno">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="264.0" layoutY="42.0" />
+                  <Label layoutX="228.0" layoutY="120.0" text="Confirmar Correo Electronico">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+                  <Label layoutX="426.0" layoutY="163.0" text="Fecha de nacimeinto">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+                  <Label layoutX="170.0" layoutY="163.0" prefHeight="19.0" prefWidth="72.0" text="contraseña">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+                  <Label layoutX="171.0" layoutY="212.0" prefHeight="19.0" prefWidth="146.0" text="Confirmar contraselña">
+                     <font>
+                        <Font name="System Bold" size="12.288000106811523" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="541.0">
+               <children>
+                  <Button layoutX="52.0" layoutY="23.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="127.0" text="Cancelar" />
+                  <Button layoutX="381.0" layoutY="23.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="110.0" text="Confirmar" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
