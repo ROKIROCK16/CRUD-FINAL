@@ -2,9 +2,12 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import service.UsuarioService;
 
 public class LoginController {
@@ -36,12 +39,33 @@ public class LoginController {
             LimpiarCampos();
         }
 
+        switch (Rol){
+            case  "ADMIN": Accion("Admin.fxml", btnIngresarSesion);
+            case  "USUARIO COMUN" : Accion("USUARIO COMUN.fxml", btnIngresarSesion);
+        }
+
     }
     private void onbtnCancelarSesionClick (ActionEvent actionEvent){
         MostrarAlerta("Inicio de sesion Cancelado");
         LimpiarCampos();
     }
 
+    @FXML
+    private void  Accion(String Archivo, Button BotonOrigen){
+        try{
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("com/example/demo/" + Archivo)
+            );
+            Scene NuevaEscena = new Scene(loader.load());
+            Stage Ventana = (Stage) btnIngresarSesion.getScene().getWindow();
+            Ventana.setScene(NuevaEscena);
+            Ventana.show();
+        }
+        catch (Exception e){
+            System.err.println("Error al cargar" + Archivo);
+            e.printStackTrace();
+        }
+    }
     private void MostrarAlerta (String mensaje){
         Alert alerta = new Alert(Alert.AlertType.ERROR);
         alerta.setTitle("Error");

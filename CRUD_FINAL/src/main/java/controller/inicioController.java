@@ -18,6 +18,7 @@ public class inicioController {
     public void inicializar(){
         System.out.println("Cargando Pantalla");
 
+
     }
     //Este metodo se usa para cargar las pantallas, se puede aplicar para los demas controlller solo hay
     //que cambiar el nombre de los FXML
