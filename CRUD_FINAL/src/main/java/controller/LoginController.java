@@ -7,8 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import service.UsuarioService;
 
-import javax.management.relation.Role;
-
 public class LoginController {
     @FXML
     private TextField txtCorreoElec;
@@ -22,18 +20,38 @@ public class LoginController {
 
     private UsuarioService usuarioService = new UsuarioService();
 
-    public void OnbtnIngresarSesion(ActionEvent actionEvent){
+    public void onbtnIngresarSesionClick(ActionEvent actionEvent){
         String Correo = txtCorreoElec.getText().trim();
         String Contrasena = txtContrasena.getText().trim();
 
         if (Correo.isEmpty() || Contrasena.isEmpty()) {
-        Alert alerta = new Alert(Alert.AlertType.ERROR);
-        alerta.setTitle("Los campos estan vacios, favor de verificarlos");
+        MostrarAlerta("Los campos estan vacios, favor de verificarlos");
         return;
         }
 
         String Rol = usuarioService.login(Correo,Contrasena);
 
+        if (Rol == null){
+            MostrarAlerta("Datos incorrecto, verifique de nuevo por favor");
+            LimpiarCampos();
+        }
 
+    }
+    private void onbtnCancelarSesionClick (ActionEvent actionEvent){
+        MostrarAlerta("Inicio de sesion Cancelado");
+        LimpiarCampos();
+    }
+
+    private void MostrarAlerta (String mensaje){
+        Alert alerta = new Alert(Alert.AlertType.ERROR);
+        alerta.setTitle("Error");
+        alerta.setHeaderText("los campos estan vacios, favor de verificar");
+        alerta.setContentText(mensaje);
+        alerta.showAndWait();
+    }
+
+    private void LimpiarCampos(){
+        txtCorreoElec.clear();
+        txtContrasena.clear();
     }
 }
