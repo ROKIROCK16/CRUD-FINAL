@@ -23,14 +23,14 @@
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtContrasena" layoutX="29.0" layoutY="125.0" prefHeight="27.0" prefWidth="275.0" />
+                  <TextField fx:id="txtContraseñaClick" layoutX="29.0" layoutY="125.0" prefHeight="27.0" prefWidth="275.0" />
                   <TextField fx:id="txtCorreoElec" layoutX="29.0" layoutY="55.0" prefHeight="27.0" prefWidth="275.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="159.0" prefWidth="363.0">
                <children>
-                  <Button fx:id="btnIngresarSesion" layoutX="13.0" layoutY="32.0" mnemonicParsing="false" onAction="#OnbtnIngresarSesion" prefHeight="28.0" prefWidth="161.0" text="INGRESAR" />
-                  <Button fx:id="btnCancelarSesion" layoutX="13.0" layoutY="112.0" mnemonicParsing="false" onAction="#OnbtnCancelarSesion" prefHeight="28.0" prefWidth="161.0" text="CANCELAR" />
+                  <Button fx:id="btnIngresarSesion" layoutX="13.0" layoutY="32.0" mnemonicParsing="false" onAction="#onbtnIngresarSesionClick" prefHeight="28.0" prefWidth="161.0" text="INGRESAR" />
+                  <Button fx:id="btnCancelarSesion" layoutX="13.0" layoutY="112.0" mnemonicParsing="false" onAction="#onbtnCancelarSesionClick" prefHeight="28.0" prefWidth="161.0" text="CANCELAR" />
                </children>
             </AnchorPane>
         </items>
