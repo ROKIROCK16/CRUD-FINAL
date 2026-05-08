@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -48,4 +49,9 @@ public class inicioController {
     }
 
 
+    public void onbtnRegistrarseClick(ActionEvent actionEvent) {
+    }
+
+    public void onbtnIniciarSesionClick(ActionEvent actionEvent) {
+    }
 }
