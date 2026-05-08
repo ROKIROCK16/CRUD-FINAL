@@ -32,8 +32,5 @@ public class LoginController {
         return;
         }
 
-        String Rol = usuarioService.login(Correo,Contrasena);
-
-
     }
 }

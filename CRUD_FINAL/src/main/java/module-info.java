@@ -7,6 +7,9 @@ module com.example.demo {
     requires com.almasb.fxgl.all;
     requires java.management;
     requires java.desktop;
+    requires jakarta.persistence;
+    requires org.hibernate.orm.core;
+    requires javafx.base;
 
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;
