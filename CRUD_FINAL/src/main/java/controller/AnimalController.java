@@ -3,6 +3,7 @@ package controller;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
+import models.AnimalesEntity;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,20 +16,20 @@ public class AnimalController {
     @FXML
     private Button btnCerrar;
     @FXML
-    private TableColumn<Animal, String>  colNombre;
+    private TableColumn<AnimalesEntity, String>  colNombre;
     @FXML
-    private TableColumn<Animal, String> colRaza;
+    private TableColumn<AnimalesEntity, String> colRaza;
     @FXML
-    private TableColumn<Animal, String> colSexo;
+    private TableColumn<AnimalesEntity, String> colSexo;
     @FXML
-    private TableColumn<Animal, String> colEdad;
+    private TableColumn<AnimalesEntity, String> colEdad;
     @FXML
-    private TableColumn<Animal, String> colEstado;
+    private TableColumn<AnimalesEntity, String> colEstado;
     @FXML
-    private TableColumn<Animal. String> colAnimal;
+    private TableColumn<AnimalesEntity, String> colAnimal;
 
 
-    private FilteredList<Animal> FiltrarAnimal;
+    private FilteredList<AnimalesEntity> FiltrarAnimal;
     public void onBtnFiltrarClick(ActionEvent actionEvent){
 
         String Filtrar = txtFiltro.getText() == null ? "" : txtFiltro.getText().trim().toLowerCase();
@@ -37,12 +38,9 @@ public class AnimalController {
                     if (Filtrar.isEmpty()) {
                         return true;
                     }
-                    return Nombre.contains(Filtrar)
-                            || Animal.getRaza().toLowerCase.contains(Filtrar)
-                            || Animal.getSexo().toLowerCase.contains(Filtrar)
-                            || Animal.getEdad().toLowerCase.contains(Filtrar)
-                            || Animal.getEstado().toLowerCase.contains(Filtrar)
-                            || Animal.getAnimal().toLowerCase.contains(Filtrar);
+                    return animal.getSexo().contains(Filtrar)
+                            || animal.getNombre().contains(Filtrar)
+                            || animal.getEstadoAdopcion().contains(Filtrar);
                 }
             );
     }
