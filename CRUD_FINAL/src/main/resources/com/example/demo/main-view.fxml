@@ -15,7 +15,7 @@
       <TextField fx:id="txtNombre" layoutX="126.0" layoutY="20.0" prefHeight="25.0" prefWidth="178.0" />
       <TextField fx:id="txtApellidoP" layoutX="126.0" layoutY="100.0" prefHeight="25.0" prefWidth="178.0" />
       <TextField fx:id="txtApellidoM" layoutX="126.0" layoutY="59.0" prefHeight="25.0" prefWidth="178.0" />
-      <Button layoutX="484.0" layoutY="255.0" mnemonicParsing="false" onAction="#onBtnGuardarClick" prefHeight="47.0" prefWidth="112.0" text="Guardar" />
+      <Button fx:id="btnGuardar" layoutX="484.0" layoutY="255.0" mnemonicParsing="false" onAction="#onBtnGuardarClick" prefHeight="47.0" prefWidth="112.0" text="Guardar" />
       <Label layoutX="325.0" layoutY="104.0" text="Fecha de nacimiento:" />
       <DatePicker fx:id="datePicker" layoutX="459.0" layoutY="100.0" prefHeight="25.0" prefWidth="178.0" />
       <Separator layoutX="26.0" layoutY="229.0" prefHeight="0.0" prefWidth="621.0" />
@@ -35,7 +35,7 @@
       <Label layoutX="334.0" layoutY="63.0" text="Confirmar Correo:" />
       <TextField fx:id="txtContrasena" layoutX="126.0" layoutY="144.0" prefHeight="25.0" prefWidth="178.0" />
       <Label layoutX="30.0" layoutY="148.0" text="Contraseña:" />
-      <Button layoutX="484.0" layoutY="337.0" mnemonicParsing="false" onAction="#onBtnCancelarClick" prefHeight="47.0" prefWidth="112.0" text="Cancelar" />
+      <Button fx:id="btnCancelar" layoutX="484.0" layoutY="337.0" mnemonicParsing="false" onAction="#onBtnCancelarClick" prefHeight="47.0" prefWidth="112.0" text="Cancelar" />
       <Label layoutX="52.0" layoutY="190.0" text="CURP:" />
       <Label layoutX="329.0" layoutY="148.0" text="Número Teléfonico:" />
       <TextField fx:id="txtNumeroTel" layoutX="459.0" layoutY="144.0" prefHeight="25.0" prefWidth="178.0" />

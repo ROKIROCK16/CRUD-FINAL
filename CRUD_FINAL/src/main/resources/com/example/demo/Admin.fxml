@@ -16,37 +16,37 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <TextField fx:id="txtAnimal" layoutX="29.0" layoutY="24.0" />
-                  <TextField fx:id="txtRaza" layoutX="29.0" layoutY="108.0" />
-                  <TextField fx:id="txtNombre" layoutX="29.0" layoutY="63.0" />
-                  <ComboBox fx:id="idSexo" layoutX="368.0" layoutY="24.0" onAction="#OncbmSexo" prefWidth="150.0" />
-                  <TextField layoutX="368.0" layoutY="72.0" />
-                  <Label layoutX="197.0" layoutY="27.0" text="Animal">
+                  <TextField fx:id="txtAnimal" layoutX="91.0" layoutY="24.0" />
+                  <TextField fx:id="txtRaza" layoutX="91.0" layoutY="99.0" />
+                  <TextField fx:id="txtNombre" layoutX="91.0" layoutY="63.0" />
+                  <ComboBox fx:id="idSexo" layoutX="368.0" layoutY="24.0" onAction="#onCbmSexo" prefWidth="150.0" />
+                  <TextField fx:id="txtEdad" layoutX="368.0" layoutY="72.0" />
+                  <Label layoutX="20.0" layoutY="27.0" text="Animal">
                      <font>
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <Label layoutX="526.0" layoutY="27.0" text="Sexo">
+                  <Label layoutX="320.0" layoutY="27.0" text="Sexo">
                      <font>
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <Label layoutX="193.0" layoutY="66.0" text="Nombre">
+                  <Label layoutX="20.0" layoutY="66.0" text="Nombre">
                      <font>
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <Label layoutX="197.0" layoutY="111.0" text="Raza">
+                  <Label layoutX="30.0" layoutY="103.0" text="Raza">
                      <font>
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <Label layoutX="526.0" layoutY="75.0" text="Edad">
+                  <Label layoutX="320.0" layoutY="79.0" text="Edad">
                      <font>
                         <Font name="System Bold" size="12.288000106811523" />
                      </font>
                   </Label>
-                  <Button fx:id="btnAgregar" layoutX="368.0" layoutY="121.0" mnemonicParsing="false" onAction="#Onbutton" text="AGREGAR PELUDITO" />
+                  <Button fx:id="btnAgregar" layoutX="461.0" layoutY="112.0" mnemonicParsing="false" onAction="#Onbutton" text="AGREGAR PELUDITO" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="638.0">
@@ -61,10 +61,10 @@
                         <TableColumn prefWidth="125.1839599609375" text="ESTADO" />
                     </columns>
                   </TableView>
-                  <Button fx:id="btnCerrar" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnctnCerrar" text="CERRAR" />
-                  <Button fx:id="btnSolicitudes" layoutX="541.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnbtnSolicitudes" text="SOLICITUDES" />
-                  <Button fx:id="btnEliminar" layoutX="284.0" layoutY="279.0" mnemonicParsing="false" onAction="#OnbtnEliminar" text="ELIMINAR" />
-                  <Button fx:id="btnFiltrar" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" onAction="#OnbtnFiltrar" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
+                  <Button fx:id="btnCerrar" layoutX="14.0" layoutY="279.0" mnemonicParsing="false" onAction="#onBtnCerrar" text="CERRAR" />
+                  <Button fx:id="btnSolicitudes" layoutX="541.0" layoutY="279.0" mnemonicParsing="false" onAction="#onBtnSolicitudes" text="SOLICITUDES" />
+                  <Button fx:id="btnEliminar" layoutX="284.0" layoutY="279.0" mnemonicParsing="false" onAction="#onBtnEliminar" text="ELIMINAR" />
+                  <Button fx:id="btnFiltrar" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" onAction="#onbtnFiltrar" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
                   <TextField fx:id="txtFiltros" layoutX="27.0" layoutY="11.0" prefHeight="28.0" prefWidth="495.0" />
                </children>
             </AnchorPane>

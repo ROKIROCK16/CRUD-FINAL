@@ -13,18 +13,18 @@
          <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="334.0" prefWidth="612.0">
                <children>
-                  <TableView layoutX="-5.0" layoutY="46.0" prefHeight="233.0" prefWidth="649.0">
+                  <TableView fx:id="tblTabla" layoutX="-5.0" layoutY="46.0" prefHeight="233.0" prefWidth="649.0">
                      <columns>
-                        <TableColumn prefWidth="118.27200746536255" text="FOLIO" />
-                        <TableColumn minWidth="0.0" prefWidth="168.1920166015625" text="NOMBRE" />
-                        <TableColumn minWidth="9.21600341796875" prefWidth="164.35198974609375" text="FECHA" />
-                        <TableColumn prefWidth="195.07199096679688" text="ESTADO" />
+                        <TableColumn fx:id="colFolio" prefWidth="118.27200746536255" text="FOLIO" />
+                        <TableColumn fx:id="colNombre" minWidth="0.0" prefWidth="168.1920166015625" text="NOMBRE" />
+                        <TableColumn fx:id="colFecha" minWidth="9.21600341796875" prefWidth="164.35198974609375" text="FECHA" />
+                        <TableColumn fx:id="colEstado" prefWidth="195.07199096679688" text="ESTADO" />
                      </columns>
                   </TableView>
                   <Button fx:id="btnRegresarSol" layoutX="27.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbtnRegresarSol" text="RERESAR" />
-                  <Button fx:id="btnFiltrarSolicitudes" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" onAction="#OnbtnFiltrarSolicitudes" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
+                  <Button fx:id="btnFiltrarSolicitudes" layoutX="530.0" layoutY="11.0" mnemonicParsing="false" onAction="#onBtnFiltrarSolicitudes" prefHeight="28.0" prefWidth="101.0" text="FILTRAR" />
                   <TextField fx:id="txtFiltrarSolicitudes" layoutX="27.0" layoutY="11.0" prefHeight="28.0" prefWidth="495.0" />
-                  <Button fx:id="btnAceptarSol" layoutX="286.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbtnAceptarSol" text="ACEPTAR" />
+                  <Button fx:id="btnAceptarSol" layoutX="286.0" layoutY="289.0" mnemonicParsing="false" onAction="#onBtnAceptarSolClick" text="ACEPTAR" />
                   <Button fx:id="btnRechazarSol" layoutX="537.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbtnRechazarSol" text="RECHAZAR" />
                </children>
             </AnchorPane>
