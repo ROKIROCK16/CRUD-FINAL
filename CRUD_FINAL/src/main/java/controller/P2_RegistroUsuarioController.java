@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.MainApplication;
 import dto.DireccionRegistroDTO;
 import dto.UsuarioRegistroDTO;
 import javafx.event.ActionEvent;
@@ -12,10 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import service.UsuarioService;
 
-import java.io.IOException;
-import java.time.LocalDate;
-
-public class MainController {
+public class P2_RegistroUsuarioController {
     @FXML
     private TextField txtNombre, txtApellidoP, txtApellidoM, txtCorreo, txtCorreoConfirmado,
             txtContrasena, txtCURP, txtNumeroTel;
@@ -38,10 +34,10 @@ public class MainController {
         );
         usuarioService.registrarUsuario(usuarioDto);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("views/INICIAR-SESION.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("views/P3_InicioSesion.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
-        stage.setTitle("Inicio de Sesion");
+        stage.setTitle("Registro de Usuario");
         stage.setScene(scene);
         stage.show();
     }
