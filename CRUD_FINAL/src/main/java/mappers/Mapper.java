@@ -1,8 +1,10 @@
 package mappers;
 
+import dto.AnimalesDTO;
 import dto.DireccionRegistroDTO;
 import dto.UsuarioConsultaDTO;
 import dto.UsuarioRegistroDTO;
+import models.AnimalesEntity;
 import models.DireccionEntity;
 import models.UsuarioEntity;
 
@@ -44,6 +46,14 @@ public class Mapper {
         return new DireccionEntity(direccionRegistroDTO.calle(),
                 direccionRegistroDTO.colonia(), direccionRegistroDTO.cp(),
                 direccionRegistroDTO.municipio(), direccionRegistroDTO.estado());
+    }
+    public static AnimalesDTO toAnimalesDTO (AnimalesEntity animalesEntity){
+        String nombreAnimal = String.format("%s",
+                animalesEntity.getNombre());
+        String Generals = String.format("%s %s %s",
+                animalesEntity.getSexo(), animalesEntity.getEstadoAdopcion(), animalesEntity.getRaza().getRaza());
+        int EdadAnimal = Period.between(animalesEntity.getFechaNacimiento(), LocalDate.now()).getMonths();
+        return new AnimalesDTO(nombreAnimal, Generals, EdadAnimal);
     }
 
 

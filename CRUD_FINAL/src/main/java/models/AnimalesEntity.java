@@ -3,6 +3,7 @@ package models;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -12,7 +13,7 @@ public class AnimalesEntity {
     private int id_Animales;
     private String nombre;
     private String sexo;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private String estadoAdopcion;
     private RazaEntity raza;
 
@@ -24,7 +25,7 @@ public class AnimalesEntity {
 
     }
 
-    public AnimalesEntity (String nombre, String sexo, Date fechaNacimiento, String estadoAdopcion ) {
+    public AnimalesEntity (String nombre, String sexo, LocalDate fechaNacimiento, String estadoAdopcion ) {
         this.nombre = nombre;
         this.sexo = sexo;
         this.fechaNacimiento=fechaNacimiento;
@@ -60,11 +61,11 @@ public class AnimalesEntity {
         this.sexo = sexo;
     }
 
-    public Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
