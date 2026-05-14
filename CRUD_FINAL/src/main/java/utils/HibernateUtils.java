@@ -12,7 +12,7 @@ public class HibernateUtils {
 
     public static EntityManagerFactory getEntityManagerFactory() {
         if (entityManagerFactory == null)
-            entityManagerFactory = Persistence.createEntityManagerFactory( "com.ites.proyectotemplate" );
+            entityManagerFactory = Persistence.createEntityManagerFactory( "com.example.demo" );
         return entityManagerFactory;
     }
 

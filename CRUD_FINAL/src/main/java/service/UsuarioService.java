@@ -32,14 +32,13 @@ public class UsuarioService {
 //                        .toList();
         return usuariosDtos;
     }
+
     public String login(String correo, String contrasena) {
-        if(correo.equals("admin@ejempli.com") && contrasena.equals("1234")){
+        if(correo.equals("admin@ejemplo.com") && contrasena.equals("1234")){
             return "ADMIN";
         }
-        if(correo.equals("usuario@ejemplo.com") && contrasena.equals("1234")){
-            return "USUARIO COMUN";
-        }
-
-        return null;
+        return "USUARIO COMUN";
+        //falta agregar validacion de usuario existente
+        //asi como admin por el tipo, este es asignado aqui
     }
 }

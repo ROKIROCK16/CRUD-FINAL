@@ -14,12 +14,12 @@
                <children>
                   <TableView layoutX="-5.0" layoutY="46.0" prefHeight="233.0" prefWidth="481.0">
                      <columns>
-                        <TableColumn fx:id="colFolio" prefWidth="118.27200746536255" text="FOLIO" />
-                        <TableColumn fx:id="colFecha" minWidth="9.21600341796875" prefWidth="164.35198974609375" text="FECHA" />
-                        <TableColumn fx:id="colEstado" prefWidth="195.07199096679688" text="ESTADO" />
+                        <TableColumn prefWidth="118.27200746536255" text="FOLIO" />
+                        <TableColumn minWidth="9.21600341796875" prefWidth="164.35198974609375" text="FECHA" />
+                        <TableColumn prefWidth="195.07199096679688" text="ESTADO" />
                      </columns>
                   </TableView>
-                  <Button fx:id="btnRegresar" layoutX="27.0" layoutY="289.0" mnemonicParsing="false" onAction="#onBtnRegresarClick" text="RERESAR" />
+                  <Button fx:id="btnREGRESAR" layoutX="27.0" layoutY="289.0" mnemonicParsing="false" onAction="#OnbntREGRESAR" text="RERESAR" />
                </children>
             </AnchorPane>
          </items>

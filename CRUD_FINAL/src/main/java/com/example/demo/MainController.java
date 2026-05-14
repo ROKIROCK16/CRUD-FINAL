@@ -1,4 +1,4 @@
-package controller;
+package com.example.demo;
 
 import com.example.demo.MainApplication;
 import dto.DireccionRegistroDTO;
@@ -12,7 +12,10 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import service.UsuarioService;
 
-public class P2_RegistroUsuarioController {
+import java.io.IOException;
+import java.time.LocalDate;
+
+public class MainController {
     @FXML
     private TextField txtNombre, txtApellidoP, txtApellidoM, txtCorreo, txtCorreoConfirmado,
             txtContrasena, txtCURP, txtNumeroTel;
@@ -35,7 +38,7 @@ public class P2_RegistroUsuarioController {
         );
         usuarioService.registrarUsuario(usuarioDto);
 
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("P3_InicioSesion.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("views/INICIAR-SESION.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.setTitle("Inicio de Sesion");
@@ -44,12 +47,7 @@ public class P2_RegistroUsuarioController {
     }
 
     public void onBtnCancelarClick (ActionEvent actionEvent) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("P1_Inicio.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = new Stage();
-        stage.setTitle("Inicio");
-        stage.setScene(scene);
-        stage.show();
+
     }
 
 }

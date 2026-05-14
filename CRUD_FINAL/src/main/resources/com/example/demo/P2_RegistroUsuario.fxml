@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.P2_RegistroUsuarioController">
+   <children>
+      <Label layoutX="37.0" layoutY="26.0" text="Nombre:" />
+      <Label layoutX="18.0" layoutY="126.0" text="Apellido paterno:" />
+      <Label layoutX="12.0" layoutY="77.0" text="Apellido materno:" />
+      <TextField fx:id="txtNombre" layoutX="160.0" layoutY="20.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="txtApellidoP" layoutX="160.0" layoutY="120.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="txtApellidoM" layoutX="160.0" layoutY="71.0" prefHeight="25.0" prefWidth="178.0" />
+      <Button fx:id="btnGuardar" layoutX="581.0" layoutY="314.0" mnemonicParsing="false" onAction="#onBtnGuardarClick" prefHeight="47.0" prefWidth="112.0" text="Guardar" />
+      <Label layoutX="343.0" layoutY="126.0" text="Fecha de nacimiento:" />
+      <DatePicker fx:id="datePicker" layoutX="548.0" layoutY="120.0" prefHeight="25.0" prefWidth="178.0" />
+      <Separator layoutX="19.0" layoutY="269.0" prefHeight="2.0" prefWidth="726.0" />
+      <Label layoutX="40.0" layoutY="293.0" text="Calle:" />
+      <TextField fx:id="txtCalle" layoutX="123.0" layoutY="287.0" prefHeight="39.0" prefWidth="362.0" />
+      <Label layoutX="29.0" layoutY="343.0" text="Colonia:" />
+      <TextField fx:id="txtColonia" layoutX="123.0" layoutY="337.0" prefHeight="39.0" prefWidth="362.0" />
+      <Label layoutX="267.0" layoutY="451.0" text="Código postal:" />
+      <TextField fx:id="txtCodigoPostal" layoutX="408.0" layoutY="445.0" prefHeight="25.0" prefWidth="77.0" />
+      <TextField fx:id="txtMunicipio" layoutX="123.0" layoutY="391.0" prefHeight="39.0" prefWidth="362.0" />
+      <Label layoutX="20.0" layoutY="397.0" text="Municipio:" />
+      <Label layoutX="33.0" layoutY="451.0" text="Estado:" />
+      <TextField fx:id="txtEstado" layoutX="124.0" layoutY="445.0" prefHeight="25.0" prefWidth="125.0" />
+      <TextField fx:id="txtCorreo" layoutX="548.0" layoutY="20.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="355.0" layoutY="26.0" text="Correo Electronico:" />
+      <TextField fx:id="txtCorreoConfirmado" layoutX="548.0" layoutY="71.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="359.0" layoutY="77.0" text="Confirmar Correo:" />
+      <TextField fx:id="txtContrasena" layoutX="160.0" layoutY="169.0" prefHeight="25.0" prefWidth="178.0" />
+      <Label layoutX="36.0" layoutY="175.0" text="Contraseña:" />
+      <Button fx:id="btnCancelar" layoutX="581.0" layoutY="397.0" mnemonicParsing="false" onAction="#onBtnCancelarClick" prefHeight="47.0" prefWidth="112.0" text="Cancelar" />
+      <Label layoutX="59.0" layoutY="226.0" text="CURP:" />
+      <Label layoutX="348.0" layoutY="175.0" text="Número Teléfonico:" />
+      <TextField fx:id="txtNumeroTel" layoutX="548.0" layoutY="169.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="txtCURP" layoutX="159.0" layoutY="220.0" prefHeight="39.0" prefWidth="568.0" />
+   </children>
+</AnchorPane>

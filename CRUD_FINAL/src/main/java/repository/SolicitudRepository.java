@@ -2,56 +2,56 @@ package repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import models.AnimalesEntity;
+import models.SolicitudesEntity;
 import models.UsuarioEntity;
 import utils.HibernateUtils;
 
 import java.util.List;
 
-public class AnimalesRepository {
+public class SolicitudRepository {
 
-    public AnimalesRepository(){
+    public SolicitudRepository(){
 
     }
 
-    public void addAnimal(AnimalesEntity animal) {
+    public void addSolicitud(SolicitudesEntity solicitud) {
         EntityManagerFactory entityManagerFactory = HibernateUtils.getEntityManagerFactory();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        entityManager.persist(animal);
+        entityManager.persist(solicitud);
         entityManager.getTransaction().commit();
         entityManager.close();
     }
 
-    public List<AnimalesEntity> getAllAnimales() {
+    public List<SolicitudesEntity> getAllSolicitudes() {
         EntityManagerFactory entityManagerFactory = HibernateUtils.getEntityManagerFactory();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        List<AnimalesEntity> result = entityManager.createQuery( "from AnimalesEntity", AnimalesEntity.class ).getResultList();
+        List<SolicitudesEntity> result = entityManager.createQuery( "from SolicitudesEntity", SolicitudesEntity.class ).getResultList();
         entityManager.close();
         return result;
     }
 
-    public AnimalesEntity getAnimalByID(int id) {
+    public SolicitudesEntity getSolicitudByID(int id) {
         EntityManagerFactory entityManagerFactory = HibernateUtils.getEntityManagerFactory();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        AnimalesEntity animal = entityManager.find(AnimalesEntity.class, id);
-        return animal;
+        SolicitudesEntity solicitud = entityManager.find(SolicitudesEntity.class, id);
+        return solicitud;
     }
 
-    public void updateAnimal(AnimalesEntity animal) {
+    public void updateSolicitud(SolicitudesEntity solicitud) {
         EntityManagerFactory entityManagerFactory = HibernateUtils.getEntityManagerFactory();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        entityManager.merge(animal);
+        entityManager.merge(solicitud);
         entityManager.getTransaction().commit();
         entityManager.close();
     }
 
-    public void removeAnimal(AnimalesEntity animal) {
+    public void removeSolicitud(SolicitudesEntity solicitud) {
         EntityManagerFactory entityManagerFactory = HibernateUtils.getEntityManagerFactory();
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
-        entityManager.remove(entityManager.merge(animal));
+        entityManager.remove(entityManager.merge(solicitud));
         entityManager.getTransaction().commit();
         entityManager.close();
     }

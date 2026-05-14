@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="368.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.P6_TablaSolicitudUsuarioController">
+   <children>
+      <TableView fx:id="tblSolicitudes" layoutX="8.0" layoutY="14.0" prefHeight="279.0" prefWidth="515.0">
+         <columns>
+            <TableColumn fx:id="tblColumnFolioS" prefWidth="126.0" text="FOLIO" />
+            <TableColumn fx:id="tblColumnFechaS" minWidth="9.21600341796875" prefWidth="200.0" text="FECHA" />
+            <TableColumn fx:id="tblColumnEstadoS" prefWidth="187.0" text="ESTADO" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnRegresar" layoutX="211.0" layoutY="308.0" mnemonicParsing="false" onAction="#onBtnRegresarClick" text="REGRESAR" />
+   </children>
+</AnchorPane>

@@ -1,12 +1,12 @@
 package mappers;
 
-import dto.AnimalesDTO;
+import dto.AnimalesRegsitroDTO;
 import dto.DireccionRegistroDTO;
 import dto.UsuarioConsultaDTO;
 import dto.UsuarioRegistroDTO;
 import models.AnimalesEntity;
 import models.DireccionEntity;
-import models.EspecieEntity;
+import models.RazaEntity;
 import models.UsuarioEntity;
 
 import java.time.LocalDate;
@@ -48,13 +48,15 @@ public class Mapper {
                 direccionRegistroDTO.colonia(), direccionRegistroDTO.cp(),
                 direccionRegistroDTO.municipio(), direccionRegistroDTO.estado());
     }
-    public static AnimalesDTO toAnimalesDTO (AnimalesEntity animalesEntity){
-        String nombreAnimal = String.format("%s",
-                animalesEntity.getNombre());
-        String Generals = String.format("%s %s %s %s" ,
-                animalesEntity.getSexo(), animalesEntity.getEstadoAdopcion(), animalesEntity.getRaza().getRaza(), animalesEntity.getRaza().getEspecie());
-        int EdadAnimal = Period.between(animalesEntity.getFechaNacimiento(), LocalDate.now()).getMonths();
-        return new AnimalesDTO(nombreAnimal, Generals, EdadAnimal);
+
+    public static RazaEntity toRazaEntity (){
+
+    }
+
+    public static AnimalesEntity toAnimalEntity (AnimalesRegsitroDTO animalesRegsitroDTO){
+        AnimalesEntity animalesEntity = new AnimalesEntity(animalesRegsitroDTO.nombre(), animalesRegsitroDTO.sexo(),
+                animalesRegsitroDTO.fechaNacimiento(), animalesRegsitroDTO.estado());
+        animalesEntity.setRaza();
     }
 
 
